@@ -24,22 +24,25 @@
 - **Consistent terminology**: Use the same term for the same concept throughout
 - **Meaningful docstrings**: Document 'why' more than 'what' (code already shows what)
 - **Documentation to code ratio**: Less is more—good code mostly documents itself
+- Typing is the best way to document. Always try to properly type. avoid using Any type unless absolutely necessary.
 
 ## Error Handling
-- **Specific exceptions**: Catch specific exceptions, not `Exception`
-- **Contextual error messages**: Include relevant details in error messages
+- **Specific exceptions**: Catch specific exceptions if known
+- **Contextual error messages**: Include relevant details in error messages and add tracebacks (assume the code is on server side and need to gracefully handle errors)
 - **Error boundaries**: Handle errors at appropriate levels, don't pass exceptions across module boundaries
 - **Fail gracefully**: Maintain system integrity when errors occur
 
 ## Pythonic Patterns
+- use latest python syntax (python 3.12+)
 - **Use standard library tools**: Learn and use `collections`, `itertools`, `functools`, etc.
 - **Leverage modern Python**: Use f-strings, walrus operator (:=), type hints where clarifying
 - **Idiomatic constructs**: Use list/dict comprehensions, generators, context managers
 - **Avoid premature optimization**: Write for clarity first, optimize only with evidence
+- If task is IO bound, use async solutions to save time wasted by blocking
 
 ## Testing and Maintainability
 - **Testable by design**: Structure code to be easily tested without extensive mocking
-- **Separation of concerns**: Distinguish between business logic, I/O, configuration
+- **Separation of concerns**: Distinguish between business logic, I/O, configuration, and functionality when needed
 - **Immutability by default**: Prefer immutable data structures where possible
 - **Explicit dependencies**: Make dependencies clear through parameters, not globals
 
