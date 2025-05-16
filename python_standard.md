@@ -5,6 +5,7 @@
 - **Don't Repeat Yourself (DRY)**: Extract duplicated logic into helper functions
 - **KISS (Keep It Simple, Stupid)**: Prefer straightforward solutions over clever tricks
 - **Fail Fast**: Validate inputs early and make invalid states impossible
+- File line count limit: no file should have more than 600 lines. try to split it into multiple modules if it reaches the limit.
 
 ## Function Design
 - **Small and focused**: Keep functions under 20-30 lines; each should fit on one screen
